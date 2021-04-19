@@ -82,4 +82,43 @@ header hr, footer hr {
 	margin-bottom: 30px;
 }
 
+/*  Formulario Login  */
 
+#wrapper {
+	font-family: 'Lato', sans-serif;
+	background-color: #fff;
+	margin-top: 80px;
+	margin-bottom: 80px
+}
+
+.form-signin {
+	max-width: 380px;
+	padding: 15px 35px 45px 35px;
+	margin: 0 auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-signin-heading {
+	margin-bottom: 30px;
+}
+
+input[type="text"] {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.icon{
+	width:80px;
+	height:80px;
+	color:#fff;
+	background:#007BFF;
+	border-radius:50%;
+	font-size:30px;
+	margin:0 auto;
+	margin-bottom:10px
+}
