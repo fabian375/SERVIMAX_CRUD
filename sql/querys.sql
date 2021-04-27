@@ -12,6 +12,14 @@ email varchar(80) NOT NULL
 select * from usuarios;
 
 
+alter table usuarios add column fecha_alta timestamp;
+
+alter table usuarios modify column fecha_alta timestamp default current_timestamp;
+
+insert into usuarios values ('','pedro',MD5('890123'),'pedro@gmail.com','');
+
+
+
 
 
 
