@@ -25,6 +25,10 @@ select * from usuarios where (username='marcelo' or email='marcelo@gmail.com') a
 
 delete from usuarios where username='maria';
 
+insert into usuarios values ('','micaela',MD5('mica'),'micaela@gmail.com',NULL);
+
+update usuarios set password=md5('123456') where username='micaela'
+
 
 
 
