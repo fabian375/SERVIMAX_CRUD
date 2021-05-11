@@ -29,10 +29,11 @@ insert into usuarios values ('','micaela',MD5('mica'),'micaela@gmail.com',NULL);
 
 update usuarios set password=md5('123456') where username='micaela'
 
+select zapatillas.imagen,marcas.descripcion,zapatillas.modelo, zapatillas.precio,zapatillas.fecha_alta from zapatillas,marcas
+where zapatillas.id_marca=marcas.id_marca;
 
-
+insert into zapatillas (id_zapatilla,imagen,modelo,precio,id_marca,fecha_alta) values (NULL,'images/Nike_Md_Runner2.jpg','NIKE MD RUNNER 2',3600,1,NULL);
 
 
 
     
-);
