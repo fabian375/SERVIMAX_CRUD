@@ -1,5 +1,6 @@
 <?php
 
+include_once("config_login.php");
 include_once("database.php");
 
 $usr=$_POST['username'];

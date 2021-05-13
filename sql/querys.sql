@@ -34,6 +34,10 @@ where zapatillas.id_marca=marcas.id_marca;
 
 insert into zapatillas (id_zapatilla,imagen,modelo,precio,id_marca,fecha_alta) values (NULL,'images/Nike_Md_Runner2.jpg','NIKE MD RUNNER 2',3600,1,NULL);
 
+select zapatillas.imagen,marcas.descripcion,zapatillas.modelo, zapatillas.precio,date_format(zapatillas.fecha_alta,'%d/%m/%Y') from zapatillas,marcas
+where zapatillas.id_marca=marcas.id_marca;
 
+select z.imagen,m.descripcion,z.modelo, z.precio,date_format(z.fecha_alta,'%d/%m/%Y') from zapatillas z,marcas m
+where z.id_marca=m.id_marca;
 
     

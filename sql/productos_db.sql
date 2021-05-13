@@ -72,3 +72,15 @@ INSERT INTO colores (id_color, descripcion) VALUES
 (NULL, 'Verde'),
 (NULL, 'Amarillo'),
 (NULL, 'Gris');
+
+
+INSERT INTO zapatillas (id_zapatilla,imagen,modelo,precio,id_marca,fecha_alta) VALUES 
+(NULL,'images/Nike_Md_Runner2.jpg','Nike Md Runner 2',3600,1,NULL),
+(NULL,'images/Nike_Downshifter_7.jpg','Nike Downshifter 7',3200,1,NULL),
+(NULL,'images/Nike_Air_Max_Advantage.jpg','Nike Air Max Advantage',3300,1,NULL),
+(NULL,'images/New_Balance_MS574CD.jpg','New Balance MS574CD',2700,6,NULL),
+(NULL,'images/Lacoste_Strideur_116.jpg','Lacoste Strideur 116 1',3150,5,NULL),
+(NULL,'images/Fila_Revolution.jpg','Fila Revolution',3200,4,NULL),
+(NULL,'images/Adidas_10K.jpg','Adidas 10K',2900,2,NULL),
+(NULL,'images/Converse_CTA_Street_High.jpg','Converse CTA Street High',3000,3,NULL),
+(NULL,'images/Converse_Zakim.jpg','Converse Zakim',1700,3,NULL);
