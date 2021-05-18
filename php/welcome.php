@@ -26,10 +26,11 @@
             echo "<br>";
             echo "Horario de Conexión: " . $_SESSION['time'];
             echo "<br>";
-            
         }
 
         ?>
+      
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

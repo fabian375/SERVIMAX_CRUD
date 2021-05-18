@@ -32,6 +32,15 @@
 								<h3>Zapatillas <?php echo $row['descripcion'] . " " . $row['modelo'] ?> </h3>
 								<p><?php echo "$" . " " . $row['precio'] ?></p>
 								<time><?php echo $row['fecha'] ?></time>
+								<?php
+
+								$sqlColours = "select m.descripcion as descripcion, z.modelo as modelo, z.precio as precio, z.imagen as imagen, z.fecha_alta as fecha,c.descripcion as color
+								 from zapatillas z,marcas m, colores_zapatillas cz,colores c where z.id_marca=m.id_marca and z.id_zapatilla=cz.id_zapatilla and c.id_color=cz.id_color order by c.descripcion";
+
+								?>
+
+
+
 							</figcaption>
 						</figure>
 					</div>

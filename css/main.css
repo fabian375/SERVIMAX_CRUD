@@ -76,6 +76,12 @@ header hr, footer hr {
 	text-align: center;
 }
 
+.gallery li span {
+	display:block;
+	text-align: center;
+
+}
+
 #footer-text {
 	text-align: center;
 	font-weight: bold;
@@ -122,3 +128,4 @@ input[type="password"] {
 	margin:0 auto;
 	margin-bottom:10px
 }
+

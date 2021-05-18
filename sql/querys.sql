@@ -40,4 +40,6 @@ where zapatillas.id_marca=marcas.id_marca;
 select z.imagen,m.descripcion,z.modelo, z.precio,date_format(z.fecha_alta,'%d/%m/%Y') from zapatillas z,marcas m
 where z.id_marca=m.id_marca;
 
+
+
     

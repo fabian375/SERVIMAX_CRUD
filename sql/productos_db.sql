@@ -84,3 +84,5 @@ INSERT INTO zapatillas (id_zapatilla,imagen,modelo,precio,id_marca,fecha_alta) V
 (NULL,'images/Adidas_10K.jpg','Adidas 10K',2900,2,NULL),
 (NULL,'images/Converse_CTA_Street_High.jpg','Converse CTA Street High',3000,3,NULL),
 (NULL,'images/Converse_Zakim.jpg','Converse Zakim',1700,3,NULL);
+
+
