@@ -17,5 +17,13 @@ return $con;
 
 }
 
+function closeConnect(){
+
+}
+
+function executeQuery($sql){
+
+}
+
 
 ?>
