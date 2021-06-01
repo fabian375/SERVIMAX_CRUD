@@ -1,7 +1,7 @@
 <?php
 
 include_once("config_login.php");
-include_once("database.php");
+include_once("db.php");
 
 $usr=$_POST['username'];
 
@@ -9,13 +9,14 @@ $pass=$_POST['password'];
 
 $newPass=md5($pass);
 
-$conn=openConnect();
+$conn=new db();
 
 $sql="select * from usuarios where (username='$usr' or email='$usr') and (password='$newPass')";
 
-$result=mysqli_query($conn,$sql);
+$result=$conn->query($sql);
 
-$row=mysqli_fetch_assoc($result);
+$row=$result->fetch_assoc();
+
 
 if ($row==NULL){
  echo "<h1>Ingreso Invalido</h1>";
@@ -28,5 +29,7 @@ else{
   header("location:welcome.php");
 }
 
+
+$conn->close();
 
 ?> 

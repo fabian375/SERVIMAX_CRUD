@@ -1,23 +1,28 @@
 <?php
+class db
+{
 
-class db{
+    protected $connection;
 
-//Atributos
-private $connection;
+    public function __construct()
+    {
+        $this->connection = new mysqli(SERVER_NAME, USER_NAME, PASSWORD, DATABASE_NAME);
+    
+        if ($this->connection->connect_errno) {
+            echo "Hubo un error de conexion" . $this->connection->connect_error;
+            exit();
+        }
+        $this->connection;
+    }
 
+    public function query($query)
+    {
+        return $this->connection->query($query);
+    }
 
-//Metodos
-public function openCon(){}
-public function executeQ(){}
-public function getState(){}
-public function closeCon(){}
-
-
-
+    public function close()
+    {
+        return $this->connection->close();
+    }
 }
-
-
-
-
-
 ?>
