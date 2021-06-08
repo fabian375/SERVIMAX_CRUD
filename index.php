@@ -18,12 +18,14 @@
 		<ul class="gallery">
 			<?php
 			include_once("php/config_productos.php");
-			include_once("php/database.php");
-			$conn = openConnect();
+			include_once("php/db.php");
+			$conn=new db();
 			$sql = "select zapatillas.id_zapatilla as id, zapatillas.imagen as imagen,marcas.descripcion as descripcion,zapatillas.modelo as modelo, zapatillas.precio as precio,date_format(zapatillas.fecha_alta,'%d/%m/%Y') as fecha from zapatillas,marcas
 			where zapatillas.id_marca=marcas.id_marca";
-			$result = mysqli_query($conn, $sql);
-			while ($row = mysqli_fetch_assoc($result)) {
+		
+			$result=$conn->query($sql);
+
+			while ($row = $result->fetch_assoc()) {
 			?>
 				<li>
 					<div class="box">
@@ -35,9 +37,10 @@
 								<?php
 								$sqlColours = "select m.descripcion as descripcion, z.modelo as modelo, z.precio as precio, z.imagen as imagen, z.fecha_alta as fecha,c.descripcion as color
 								 from zapatillas z,marcas m, colores_zapatillas cz,colores c where z.id_marca=m.id_marca and z.id_zapatilla=cz.id_zapatilla and c.id_color=cz.id_color and z.id_zapatilla=" . $row['id'];
-								$resultColours = mysqli_query($conn, $sqlColours);
+								
+								$resultColours=$conn->query($sqlColours);
 								$textColours = "Colores: ";
-								while ($rowColours = mysqli_fetch_assoc($resultColours)) {
+								while ($rowColours = $resultColours->fetch_assoc()) {
 									$textColours = $textColours . " " . $rowColours['color'];
 								}
 								?>
