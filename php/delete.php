@@ -30,13 +30,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">EDITAR PRODUCTOS</h3>
+                <h3 class="text-center">ELIMINAR PRODUCTOS</h3>
                 <br>
             </div>
             <div class="col-md-12">
                 <form action="save_products.php" method="post" accept-charset="utf-8" enctype="multipart/form-data" class="form-group">
                     <?php if( $detail->id_zapatilla > 0 ){ ?>
-                        <input type="hidden" name="action" value="update">
+                        <input type="hidden" name="action" value="trasch">
                         <input type="hidden" name="id_zapatilla" value="<?php echo $detail->id_zapatilla; ?>">
                     <?php } ?>
                     <div class="form-group">
@@ -110,7 +110,7 @@
                         </div>
                         <br>
                         <div class="text-center">
-                            <input type="submit" class="btn btn-success" value="Editar Producto">
+                            <input type="submit" class="btn btn-success" value="Eliminar Producto">
                             <a href="welcome.php">
                                 <input type="button" class="btn btn-warning" value="Regresar">
                             </a>
@@ -143,7 +143,7 @@
         
         $( "#search_modelo" ).change(function() {
           var id = $(this).val();
-          window.location.href = "edit.php?id="+id;
+          window.location.href = "delete.php?id="+id;
         });
 
     </script>

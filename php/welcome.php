@@ -33,7 +33,7 @@
       
         <a href="insert_products.php" class="btn btn-primary" role="button">Ingresar Producto</a>
         <a href="edit.php" class="btn btn-primary" role="button">Editar Producto</a>
-        <a href="insert_products.php" class="btn btn-primary" role="button">Eliminar Producto</a>
+        <a href="delete.php" class="btn btn-primary" role="button">Eliminar Producto</a>
 
     </div>
 

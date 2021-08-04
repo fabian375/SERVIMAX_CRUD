@@ -76,6 +76,9 @@
                         <br>
                         <div class="text-center">
                             <input type="submit" class="btn btn-success" value="Añadir Producto">
+                            <a href="welcome.php">
+                                <input type="button" class="btn btn-warning" value="Regresar">
+                            </a>
                         </div>
                     </div>
 
